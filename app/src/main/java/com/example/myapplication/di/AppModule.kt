@@ -1,7 +1,7 @@
-package com.example.di
+package com.example.myapplication.di
 
 import android.content.Context
-import com.example.BaseApplication
+import com.example.myapplication.BaseApplication
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

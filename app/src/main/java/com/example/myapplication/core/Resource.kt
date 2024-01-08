@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.myapplication.core
 
 
 sealed class Resource<out T> {

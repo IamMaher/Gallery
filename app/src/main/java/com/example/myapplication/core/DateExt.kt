@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.myapplication.core
 
 
 fun Long.toDurationString(): String {

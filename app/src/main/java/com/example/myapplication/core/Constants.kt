@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.myapplication.core
 
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition

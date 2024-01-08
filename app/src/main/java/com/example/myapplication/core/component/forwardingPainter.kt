@@ -1,4 +1,4 @@
-package com.example.core.component
+package com.example.myapplication.core.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember

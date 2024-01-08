@@ -40,8 +40,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-
+            MyApplicationTheme(darkTheme = viewModel.darkTheme) {
                 storagePermissionState = rememberMultiplePermissionsState(
                     permissions = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU)
                         preTiramisuPermissions else tiramisuPermissions,

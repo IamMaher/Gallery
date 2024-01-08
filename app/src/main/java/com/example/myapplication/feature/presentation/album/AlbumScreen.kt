@@ -14,6 +14,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -32,6 +34,8 @@ fun AlbumScreen(
     viewModel: AlbumViewModel = hiltViewModel(),
     context: Context = LocalContext.current
 ) {
+    val screenState by viewModel.screenState.collectAsState()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -62,7 +66,7 @@ fun AlbumScreen(
             verticalArrangement = Arrangement.spacedBy(24.dp),
             horizontalArrangement = Arrangement.spacedBy(24.dp),
         ) {
-            items(emptyList<Album>(), key = { it.id }) {
+            items(screenState.albums, key = { it.id }) {
                 AlbumItem(
                     album = it,
                     thumbnail = it.pathToThumbnail,

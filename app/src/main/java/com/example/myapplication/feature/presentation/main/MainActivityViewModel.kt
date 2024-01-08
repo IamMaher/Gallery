@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.gallery.feature.data.datastore.getDarkTheme
-import com.example.gallery.feature.data.datastore.isSystemDarkTheme
+import com.example.myapplication.feature.data.datastore.getDarkTheme
+import com.example.myapplication.feature.data.datastore.isSystemDarkTheme
 import com.example.myapplication.BaseApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest

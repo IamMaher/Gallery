@@ -85,10 +85,11 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
-
+    testImplementation(libs.junit.jupiter)
     testImplementation (libs.junit.jupiter.api)
     testImplementation (libs.junit.jupiter.params)
     testRuntimeOnly (libs.junit.jupiter.engine)
     testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation("io.mockk:mockk:1.13.7")
 
 }

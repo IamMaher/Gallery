@@ -41,6 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme {
+
                 storagePermissionState = rememberMultiplePermissionsState(
                     permissions = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU)
                         preTiramisuPermissions else tiramisuPermissions,

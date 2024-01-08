@@ -3,7 +3,7 @@ package com.example.myapplication.feature.data.media
 import android.content.ContentResolver
 import android.os.Build
 import android.provider.MediaStore
-import com.example.gallery.feature.data.ContentQuery
+import com.example.myapplication.feature.data.ContentQuery
 import com.example.gallery.feature.domain.model.Album
 
 

@@ -7,7 +7,7 @@ import android.database.MergeCursor
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
-import com.example.gallery.feature.data.ContentQuery
+import com.example.myapplication.feature.data.ContentQuery
 import com.example.gallery.feature.domain.model.Media
 
 fun contentUriVideo(): Uri = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) MediaStore.Video.Media.EXTERNAL_CONTENT_URI else

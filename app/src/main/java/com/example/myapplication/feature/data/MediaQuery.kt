@@ -1,4 +1,4 @@
-package com.example.gallery.feature.data
+package com.example.myapplication.feature.data
 
 import android.provider.MediaStore
 

@@ -1,7 +1,10 @@
 package com.example.myapplication.di
 
+import android.content.ContentResolver
 import android.content.Context
 import com.example.myapplication.BaseApplication
+import com.example.myapplication.feature.data.MediaRepositoryImpl
+import com.example.myapplication.feature.domain.MediaRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,5 +19,16 @@ class AppModule {
     @Singleton
     fun provideBaseApplication(@ApplicationContext context: Context): BaseApplication {
         return context as BaseApplication
+    }
+
+    @Provides
+    fun provideContentResolver(@ApplicationContext context: Context): ContentResolver {
+        return context.contentResolver
+    }
+
+    @Provides
+    @Singleton
+    fun provideMediaRepository(contentResolver: ContentResolver): MediaRepository {
+        return MediaRepositoryImpl(contentResolver)
     }
 }

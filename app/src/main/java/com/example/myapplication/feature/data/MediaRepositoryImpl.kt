@@ -44,13 +44,16 @@ class MediaRepositoryImpl(private val contentResolver: ContentResolver) : MediaR
 
     override fun getAlbums(): Resource<List<Album>> {
         return try {
+            val allPhotos = contentResolver.getMedia(ContentQuery.PhotoQuery())
+            val allVideos = contentResolver.getMedia(ContentQuery.VideoQuery())
             val data = contentResolver.getAlbums().toMutableList()
+            allPhotos.firstOrNull()?.let { album -> data.add(0, Album.allPhotos(album.path, album.relativePath, allPhotos.size.toLong())) }
+            allVideos.firstOrNull()?.let { album -> data.add(1, Album.allVideos(album.path, album.relativePath, allVideos.size.toLong())) }
             Resource.Success(data = data.toList())
         } catch (e: Exception) {
             Resource.Error(message = e.localizedMessage ?: "An error occurred")
         }
     }
-
     override fun getMediaById(mediaId: Long): Media? {
         val contentQuery = ContentQuery.MediaQuery()
         return contentResolver.findMedia(contentQuery)

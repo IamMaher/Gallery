@@ -46,6 +46,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme(darkTheme = viewModel.darkTheme) {
                 val navController = rememberNavController()
+
                 storagePermissionState = rememberMultiplePermissionsState(
                     permissions = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU)
                         preTiramisuPermissions else tiramisuPermissions,

@@ -5,7 +5,6 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.gallery.ui.navigation.Screen
 import com.example.myapplication.feature.presentation.album.AlbumScreen
 
 @Composable

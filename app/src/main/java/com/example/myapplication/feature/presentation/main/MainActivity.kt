@@ -11,8 +11,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
+import androidx.navigation.compose.rememberNavController
+import com.example.myapplication.ui.navigation.MainGraph
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.MultiplePermissionsState
@@ -41,6 +45,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme(darkTheme = viewModel.darkTheme) {
+                val navController = rememberNavController()
                 storagePermissionState = rememberMultiplePermissionsState(
                     permissions = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU)
                         preTiramisuPermissions else tiramisuPermissions,
@@ -68,7 +73,7 @@ class MainActivity : ComponentActivity() {
                     }
                 } else {
                     // Screen content
-                    // TODO: navigate to next screen
+                    MainGraph(navController = navController, modifier = Modifier.fillMaxSize())
                 }
             }
         }

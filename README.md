@@ -22,20 +22,32 @@ This Android Gallery App serves as an assessment project to evaluate your profic
 
 - **Dark Mode**: Implement a dark mode feature to enhance the user experience and provide visual customization options.
 
+- **Grid and Linear Toggle:**: Implement a toggle functionality to switch between grid and linear layouts for media display.
+
+- **Persistent Setting by DataStore:**: Use DataStore to persistently store and retrieve user settings, ensuring a seamless experience across app sessions.
+
+
 ## Screens
+
+![Album](https://github.com/IamMaher/Gallery/assets/15931456/e3a0a155-b47c-4bba-a60c-9579c6384c5f)
+![media_content_grid](https://github.com/IamMaher/Gallery/assets/15931456/0b127ed5-28ad-4531-a868-cff3d2643b45)
+![media_content_linear](https://github.com/IamMaher/Gallery/assets/15931456/6e01a25d-7828-45a2-a36f-545e16797cfe)
+
 
 ### 1. Media Buckets Screen
 
 - Display a list of available media buckets, including "All Photos" and "All Videos."
-- Utilize the MVI pattern to manage the state of the screen.
-- Employ Dagger Hilt for dependency injection to achieve a modular and testable codebase.
+- Utilize Dagger Hilt for dependency injection.
+- Implement MVI architecture to manage the UI state.
+- Apply Clean Architecture principles for separation of concerns.
 
 ### 2. Media Contents Screen
 
-- Display the media contents within each selected bucket.
-- Implement a clean and intuitive UI using Jetpack Compose.
-- Apply the MVI pattern to handle the state of the media contents screen.
-- Leverage Kotlin Coroutines for asynchronous tasks such as fetching and displaying media.
+- Show the media contained in each selected bucket.
+- Utilize Coil for efficient image loading.
+- Implement a toggle to switch between grid and linear layouts for media display.
+- Incorporate Dark Mode for a personalized visual experience.
+- Utilize DataStore to persistently store and retrieve user settings.
 
 ## Getting Started
 

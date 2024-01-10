@@ -8,11 +8,15 @@ This Android Gallery App serves as an assessment project to evaluate your profic
 
 - **MVI (Model-View-Intent)**: Adopt the MVI architectural pattern to ensure a unidirectional flow of data and improve the predictability of state changes.
 
+  ![MVI](https://github.com/IamMaher/Gallery/assets/15931456/a7d38ed5-f51a-478b-b979-12bb06c515ab)
+
 - **Clean Architecture**: Implement Clean Architecture principles to promote separation of concerns, making your codebase modular and maintainable.
 
-- **Coroutine**: Leverage Kotlin Coroutines for asynchronous programming, ensuring smooth and efficient handling of background tasks.
+  ![clean_architecture](https://github.com/IamMaher/Gallery/assets/15931456/3260e6d7-7406-41c0-a464-94517a925bce)
 
 - **DDD (Domain-Driven Design)**: Apply DDD concepts to model your app's domain and business logic in a way that aligns with the problem space.
+
+- **Coroutine**: Leverage Kotlin Coroutines for asynchronous programming, ensuring smooth and efficient handling of background tasks.
 
 - **Kotlin**: Develop the app using Kotlin, taking advantage of its concise syntax and modern language features.
 
@@ -29,10 +33,21 @@ This Android Gallery App serves as an assessment project to evaluate your profic
 
 ## Screens
 
-![Album](https://github.com/IamMaher/Gallery/assets/15931456/1813bd13-7dab-4112-8667-c11858a5304b)
-![media_content_grid](https://github.com/IamMaher/Gallery/assets/15931456/a33a0031-eb51-4f7d-ace5-3706e8c4b480)
-![media_content_linear](https://github.com/IamMaher/Gallery/assets/15931456/241f3728-6195-4ec6-ad1c-131db11e52e5)
-![darkmode](https://github.com/IamMaher/Gallery/assets/15931456/826c962e-ee2c-412f-857a-bd8d417db57c)
+
+<table align="center">
+  <tr>
+    <th>Album (All-Photos/Videos)</th>
+    <th>Media Content(Grid)</th>
+    <th>Media Content(Linear)</th>
+    <th>Media Content(DarkMode)</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://github.com/IamMaher/Gallery/assets/15931456/1813bd13-7dab-4112-8667-c11858a5304b" width="200" alt="Album (All-Photos/Videos)"></td>
+    <td align="center"><img src="https://github.com/IamMaher/Gallery/assets/15931456/a33a0031-eb51-4f7d-ace5-3706e8c4b480" width="200" alt="Media Content(Grid)"></td>
+    <td align="center"><img src="https://github.com/IamMaher/Gallery/assets/15931456/241f3728-6195-4ec6-ad1c-131db11e52e5" width="200" alt="Media Content(Linear)"></td>
+    <td align="center"><img src="https://github.com/IamMaher/Gallery/assets/15931456/826c962e-ee2c-412f-857a-bd8d417db57c" width="200" alt="Media Content(DarkMode)"></td>
+  </tr>
+</table>
 
 
 ### 1. Media Buckets Screen

@@ -29,9 +29,10 @@ This Android Gallery App serves as an assessment project to evaluate your profic
 
 ## Screens
 
-![Album](https://github.com/IamMaher/Gallery/assets/15931456/e3a0a155-b47c-4bba-a60c-9579c6384c5f)
-![media_content_grid](https://github.com/IamMaher/Gallery/assets/15931456/0b127ed5-28ad-4531-a868-cff3d2643b45)
-![media_content_linear](https://github.com/IamMaher/Gallery/assets/15931456/6e01a25d-7828-45a2-a36f-545e16797cfe)
+![Album](https://github.com/IamMaher/Gallery/assets/15931456/1813bd13-7dab-4112-8667-c11858a5304b)
+![media_content_grid](https://github.com/IamMaher/Gallery/assets/15931456/a33a0031-eb51-4f7d-ace5-3706e8c4b480)
+![media_content_linear](https://github.com/IamMaher/Gallery/assets/15931456/241f3728-6195-4ec6-ad1c-131db11e52e5)
+![darkmode](https://github.com/IamMaher/Gallery/assets/15931456/826c962e-ee2c-412f-857a-bd8d417db57c)
 
 
 ### 1. Media Buckets Screen

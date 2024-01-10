@@ -12,9 +12,9 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -42,7 +42,7 @@ fun MediaScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colors.surface)
+            .background(MaterialTheme.colorScheme.surface)
     ) {
         SimpleTopAppBar(
             title = viewModel.album.label,
@@ -51,7 +51,7 @@ fun MediaScreen(
                     Icon(
                         painter = painterResource(id = R.drawable.ic_arrow_back),
                         contentDescription = null,
-                        tint = MaterialTheme.colors.onSurface,
+                        tint = MaterialTheme.colorScheme.onSurface,
                     )
                 }
             },
@@ -74,7 +74,7 @@ fun MediaScreen(
 fun LinearList(state: MediaState) {
     LazyColumn(
         modifier = Modifier
-            .background(MaterialTheme.colors.surface)
+            .background(MaterialTheme.colorScheme.surface)
             .fillMaxSize(),
         contentPadding = PaddingValues(vertical = 20.dp, horizontal = 4.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp)
@@ -96,7 +96,7 @@ fun GridList(state: MediaState) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         modifier = Modifier
-            .background(MaterialTheme.colors.surface)
+            .background(MaterialTheme.colorScheme.surface)
             .fillMaxSize(),
         contentPadding = PaddingValues(vertical = 20.dp, horizontal = 4.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp),

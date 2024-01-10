@@ -10,8 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -56,20 +56,20 @@ fun AlbumItem(
                 modifier = modifier.fillMaxWidth(),
                 error = forwardingPainter(
                     painter = painterResource(R.drawable.ic_broken_image),
-                    colorFilter = ColorFilter.tint(MaterialTheme.colors.onSurface),
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
                 )
             )
             Text(
                 text = album.count.toString(),
-                style = MaterialTheme.typography.h6.copy(fontSize = 12.sp),
-                color = MaterialTheme.colors.onPrimary,
+                style = MaterialTheme.typography.headlineMedium.copy(fontSize = 12.sp),
+                color = MaterialTheme.colorScheme.onPrimary,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .padding(16.dp)
                     .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colors.onSurface.copy(alpha = 0.5f))
+                    .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f))
                     .widthIn(min = 16.dp)
                     .align(Alignment.BottomEnd)
             )
@@ -77,8 +77,8 @@ fun AlbumItem(
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = album.label,
-            style = MaterialTheme.typography.h6.copy(fontSize = 18.sp),
-            color = MaterialTheme.colors.onSurface,
+            style = MaterialTheme.typography.headlineMedium.copy(fontSize = 18.sp),
+            color = MaterialTheme.colorScheme.onSurface,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )

@@ -10,9 +10,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -23,10 +23,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.gallery.feature.domain.model.Album
 import com.example.myapplication.R
 import com.example.myapplication.feature.presentation.album.component.AlbumItem
 import com.example.myapplication.feature.presentation.main.component.SimpleTopAppBar
+import com.example.myapplication.ui.navigation.Screen
 
 @Composable
 fun AlbumScreen(
@@ -39,7 +39,7 @@ fun AlbumScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colors.surface)
+            .background(MaterialTheme.colorScheme.surface)
     ) {
 
         SimpleTopAppBar(
@@ -51,7 +51,7 @@ fun AlbumScreen(
                     Icon(
                         painter = painterResource(id = R.drawable.ic_dark_mode),
                         contentDescription = null,
-                        tint = MaterialTheme.colors.onSurface
+                        tint = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }
@@ -60,7 +60,7 @@ fun AlbumScreen(
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier
-                .background(MaterialTheme.colors.surface)
+                .background(MaterialTheme.colorScheme.surface)
                 .fillMaxSize(),
             contentPadding = PaddingValues(20.dp),
             verticalArrangement = Arrangement.spacedBy(24.dp),
@@ -71,7 +71,7 @@ fun AlbumScreen(
                     album = it,
                     thumbnail = it.pathToThumbnail,
                     modifier = Modifier.clickable {
-                        // TODO: navigate to next scrren
+                        navController.navigate(Screen.MediaScreen.routeWithArgs(it))
                     }
                 )
             }
